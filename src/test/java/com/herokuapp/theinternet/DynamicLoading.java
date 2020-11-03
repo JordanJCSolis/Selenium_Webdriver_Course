@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class DynamicLoading extends BaseTest {
+public class DynamicLoading extends TestUtilities {
 
 	@Test
 	public void notVisibleTest() {
@@ -53,15 +53,6 @@ public class DynamicLoading extends BaseTest {
 		Assert.assertTrue(actualMessage.contains(expectedMessage));
 
 		startButton.click();
-	}
-
-	private void sleep(long n) {
-		try {
-			Thread.sleep(n);
-		} catch (InterruptedException e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
 	}
 
 }

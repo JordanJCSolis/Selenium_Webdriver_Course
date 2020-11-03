@@ -6,14 +6,13 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class NegativeLoginTests extends BaseTest{
-	
-	
+public class NegativeLoginTests extends TestUtilities {
+
 	@Parameters({ "username", "password", "expectedMessage" })
 	@Test(priority = 1, enabled = true, groups = { "negativeTest", "smokeTest" })
-	
+
 	public void negativeLoginTest(String username, String password, String expectedMessage) {
 		System.out.println("Starting Negative Username Test\n\n");
 
@@ -65,15 +64,6 @@ public class NegativeLoginTests extends BaseTest{
 		Assert.assertTrue(actualMessage.contains(expectedMessage));
 
 		sleep(2000);
-	}
-
-	private void sleep(long n) {
-		try {
-			Thread.sleep(n);
-		} catch (InterruptedException e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
 	}
 
 }

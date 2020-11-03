@@ -7,13 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class NotSuchElementException extends BaseTest{
+public class NotSuchElementException extends TestUtilities {
 
 	@Test
 	public void notSuchElementException() {
-		
+
 		// Open URL
 		String url = "https://the-internet.herokuapp.com/dynamic_loading/2";
 		driver.get(url);
@@ -44,15 +44,6 @@ public class NotSuchElementException extends BaseTest{
 //		Assert.assertTrue(actualMessage.contains(expectedMessage));
 
 		Assert.assertTrue(
-				wait.until(ExpectedConditions.textToBePresentInElementLocated(
-						By.id("finish"), expectedMessage)));
-	}
-
-	private void sleep(long n) {
-		try {
-			Thread.sleep(n);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+				wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("finish"), expectedMessage)));
 	}
 }

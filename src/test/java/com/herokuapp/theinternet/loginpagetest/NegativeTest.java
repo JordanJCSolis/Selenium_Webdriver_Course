@@ -1,18 +1,18 @@
 package com.herokuapp.theinternet.loginpagetest;
 
-import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class NegativeTest extends BaseTest{
+public class NegativeTest extends TestUtilities {
 
 	@Test(priority = 1, enabled = true, groups = { "negativeTest", "smokeTest" })
 	public void NegativeUsernameTest() {
 		System.out.println("Starting Negative Username Test\n\n");
-		
+
 		// Open URL
 		String url = "https://the-internet.herokuapp.com/login";
 		driver.get(url);
@@ -123,15 +123,6 @@ public class NegativeTest extends BaseTest{
 		Assert.assertTrue(actualMessage.contains(expectedMessage));
 
 		sleep(2000);
-	}
-
-	private void sleep(long n) {
-		try {
-			Thread.sleep(n);
-		} catch (InterruptedException e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
 	}
 
 }

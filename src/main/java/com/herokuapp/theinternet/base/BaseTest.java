@@ -42,13 +42,11 @@ public class BaseTest {
 			break;
 		}
 
-
 		// Maximize window
 		driver.manage().window().maximize();
 		System.out.println("Window maximized");
 	}
-	
-	
+
 	// Ending session
 	@AfterMethod(alwaysRun = true)
 	public void endSession() {

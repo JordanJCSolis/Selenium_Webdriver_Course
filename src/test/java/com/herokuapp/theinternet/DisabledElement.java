@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class DisabledElement extends BaseTest {
+public class DisabledElement extends TestUtilities {
 
 	@Test
 	public void disabledElementTest() {
