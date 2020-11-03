@@ -17,7 +17,7 @@ public class DisabledElement extends TestUtilities {
 		// Open URL
 		String url = "http://the-internet.herokuapp.com/dynamic_controls";
 		driver.get(url);
-		System.out.println("URL open");
+		log.info("URL open");
 
 		// Create two WebElements (button enable and text field.
 

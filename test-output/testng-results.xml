@@ -2,57 +2,67 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-02T23:35:01 GMT-06:00" name="LoginTestsSuite" finished-at="2020-11-02T23:35:24 GMT-06:00" duration-ms="22191">
+  <suite started-at="2020-11-03T00:31:00 GMT-06:00" name="LoginTestsSuite" finished-at="2020-11-03T00:31:23 GMT-06:00" duration-ms="22654">
     <groups>
       <group name="positiveTest">
-        <method signature="PossitiveLoginTest.positiveLogingTest()[pri:1, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@52102734]" name="positiveLogingTest" class="com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest"/>
+        <method signature="PossitiveLoginTest.positiveLogingTest()[pri:1, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@13b13b5d]" name="positiveLogingTest" class="com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest"/>
       </group> <!-- positiveTest -->
       <group name="negativeTest">
-        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@e7edb54]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
-        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@1eb5174b]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
+        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@11bd0f3b]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
+        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@696da30b]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
       </group> <!-- negativeTest -->
       <group name="smokeTest">
-        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@e7edb54]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
-        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@1eb5174b]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
+        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@11bd0f3b]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
+        <method signature="NegativeLoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@696da30b]" name="negativeLoginTest" class="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests"/>
       </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2020-11-02T23:35:01 GMT-06:00" name="PossitiveLoginTest" finished-at="2020-11-02T23:35:13 GMT-06:00" duration-ms="11659">
+    <test started-at="2020-11-03T00:31:00 GMT-06:00" name="PossitiveLoginTest" finished-at="2020-11-03T00:31:14 GMT-06:00" duration-ms="14131">
       <class name="com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@52102734]" started-at="2020-11-02T23:35:01 GMT-06:00" name="setup" finished-at="2020-11-02T23:35:09 GMT-06:00" duration-ms="7203" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@13b13b5d]" started-at="2020-11-03T00:31:00 GMT-06:00" name="setup" finished-at="2020-11-03T00:31:09 GMT-06:00" duration-ms="8852" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@5a56cdac]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="positiveLogingTest()[pri:1, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@52102734]" started-at="2020-11-02T23:35:09 GMT-06:00" name="positiveLogingTest" finished-at="2020-11-02T23:35:12 GMT-06:00" duration-ms="3444" status="PASS">
+        <test-method signature="positiveLogingTest()[pri:1, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@13b13b5d]" started-at="2020-11-03T00:31:09 GMT-06:00" name="positiveLogingTest" finished-at="2020-11-03T00:31:13 GMT-06:00" duration-ms="3754" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveLogingTest -->
-        <test-method is-config="true" signature="endSession()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@52102734]" started-at="2020-11-02T23:35:12 GMT-06:00" name="endSession" finished-at="2020-11-02T23:35:13 GMT-06:00" duration-ms="940" status="PASS">
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest@13b13b5d]" started-at="2020-11-03T00:31:13 GMT-06:00" name="endSession" finished-at="2020-11-03T00:31:14 GMT-06:00" duration-ms="1433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSession -->
       </class> <!-- com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest -->
     </test> <!-- PossitiveLoginTest -->
-    <test started-at="2020-11-02T23:35:01 GMT-06:00" name="NegativePasswordTest" finished-at="2020-11-02T23:35:22 GMT-06:00" duration-ms="20291">
+    <test started-at="2020-11-03T00:31:00 GMT-06:00" name="NegativePasswordTest" finished-at="2020-11-03T00:31:22 GMT-06:00" duration-ms="22299">
       <class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@1eb5174b]" started-at="2020-11-02T23:35:01 GMT-06:00" name="setup" finished-at="2020-11-02T23:35:09 GMT-06:00" duration-ms="7154" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@696da30b]" started-at="2020-11-03T00:31:00 GMT-06:00" name="setup" finished-at="2020-11-03T00:31:09 GMT-06:00" duration-ms="9035" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@57cf54e1]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@1eb5174b]" started-at="2020-11-02T23:35:09 GMT-06:00" name="negativeLoginTest" finished-at="2020-11-02T23:35:21 GMT-06:00" duration-ms="12362" status="PASS">
+        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@696da30b]" started-at="2020-11-03T00:31:09 GMT-06:00" name="negativeLoginTest" finished-at="2020-11-03T00:31:22 GMT-06:00" duration-ms="12470" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -73,26 +83,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLoginTest -->
-        <test-method is-config="true" signature="endSession()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@1eb5174b]" started-at="2020-11-02T23:35:21 GMT-06:00" name="endSession" finished-at="2020-11-02T23:35:22 GMT-06:00" duration-ms="708" status="PASS">
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@696da30b]" started-at="2020-11-03T00:31:22 GMT-06:00" name="endSession" finished-at="2020-11-03T00:31:22 GMT-06:00" duration-ms="709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSession -->
       </class> <!-- com.herokuapp.theinternet.loginpagetest.NegativeLoginTests -->
     </test> <!-- NegativePasswordTest -->
-    <test started-at="2020-11-02T23:35:01 GMT-06:00" name="NegativeUsernameTest" finished-at="2020-11-02T23:35:24 GMT-06:00" duration-ms="22191">
+    <test started-at="2020-11-03T00:31:00 GMT-06:00" name="NegativeUsernameTest" finished-at="2020-11-03T00:31:23 GMT-06:00" duration-ms="22654">
       <class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@e7edb54]" started-at="2020-11-02T23:35:01 GMT-06:00" name="setup" finished-at="2020-11-02T23:35:09 GMT-06:00" duration-ms="7192" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@11bd0f3b]" started-at="2020-11-03T00:31:00 GMT-06:00" name="setup" finished-at="2020-11-03T00:31:10 GMT-06:00" duration-ms="9541" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7c711375]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@e7edb54]" started-at="2020-11-02T23:35:09 GMT-06:00" name="negativeLoginTest" finished-at="2020-11-02T23:35:23 GMT-06:00" duration-ms="14165" status="PASS">
+        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@11bd0f3b]" started-at="2020-11-03T00:31:10 GMT-06:00" name="negativeLoginTest" finished-at="2020-11-03T00:31:22 GMT-06:00" duration-ms="12378" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -113,7 +128,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLoginTest -->
-        <test-method is-config="true" signature="endSession()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@e7edb54]" started-at="2020-11-02T23:35:23 GMT-06:00" name="endSession" finished-at="2020-11-02T23:35:24 GMT-06:00" duration-ms="769" status="PASS">
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.NegativeLoginTests@11bd0f3b]" started-at="2020-11-03T00:31:22 GMT-06:00" name="endSession" finished-at="2020-11-03T00:31:23 GMT-06:00" duration-ms="649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSession -->

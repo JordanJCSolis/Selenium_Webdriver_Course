@@ -18,7 +18,7 @@ public class DynamicLoading extends TestUtilities {
 		// Open URL
 		String url = "https://the-internet.herokuapp.com/dynamic_loading/1";
 		driver.get(url);
-		System.out.println("URL open");
+		log.info("URL open");
 
 		// Identify start button
 		WebElement startButton = driver.findElement(By.xpath("//div[@id='start']/button"));
@@ -41,10 +41,10 @@ public class DynamicLoading extends TestUtilities {
 		try {
 			wait.until(ExpectedConditions.visibilityOf(currentMessage));
 		} catch (TimeoutException exeption) {
-			System.out.println("Exception catch: " + exeption.getMessage());
+			log.info("Exception catch: " + exeption.getMessage());
 			sleep(3000);
 		}
-		System.out.println("process continues here");
+		log.info("process continues here");
 
 		// Cast WebElement into String
 		String actualMessage = currentMessage.getText();

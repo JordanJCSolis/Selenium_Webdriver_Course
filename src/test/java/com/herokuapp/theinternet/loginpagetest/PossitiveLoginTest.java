@@ -15,7 +15,7 @@ public class PossitiveLoginTest extends TestUtilities {
 
 		String url = "https://the-internet.herokuapp.com/login";
 		driver.get(url);
-		System.out.println("Page was open");
+		log.info("Page was open");
 
 		// enter user name
 		WebElement username = driver.findElement(By.id("username"));

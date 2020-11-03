@@ -14,42 +14,42 @@ public class NegativeLoginTests extends TestUtilities {
 	@Test(priority = 1, enabled = true, groups = { "negativeTest", "smokeTest" })
 
 	public void negativeLoginTest(String username, String password, String expectedMessage) {
-		System.out.println("Starting Negative Username Test\n\n");
+		log.info("Starting Negative Login Test");
 
 		// Open URL
 		String url = "https://the-internet.herokuapp.com/login";
 		driver.get(url);
-		System.out.println("URL open");
+		log.info("URL open");
 
 		sleep(1000);
 
 		// Locate username textbox
 		WebElement usernameField = driver.findElement(By.xpath("//input[@name='username']"));
-		System.out.println("Username text box located successfully");
+		log.info("Username text box located successfully");
 
 		// Type incorrect username
 		usernameField.sendKeys(username);
-		System.out.println("Username typed");
+		log.info("Username typed");
 
 		sleep(2000);
 
 		// Locate password textbox
 		WebElement passwordField = driver.findElement(By.xpath("//input[@name='password']"));
-		System.out.println("Password text box located successfully");
+		log.info("Password text box located successfully");
 
 		// Type correct password
 		passwordField.sendKeys(password);
-		System.out.println("Password typed");
+		log.info("Password typed");
 
 		sleep(2000);
 
 		// locate Login button
 		WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
-		System.out.println("Login button located successfully");
+		log.info("Login button located successfully");
 
 		// Clicking button
 		loginButton.click();
-		System.out.println("Click successfully");
+		log.info("Click successfully");
 
 		sleep(2000);
 
@@ -57,7 +57,7 @@ public class NegativeLoginTests extends TestUtilities {
 
 		// Current Message
 		WebElement invalidUsernameMessage = driver.findElement(By.id("flash"));
-		System.out.println("Invalid message found");
+		log.info("Invalid message found");
 		String actualMessage = invalidUsernameMessage.getText();
 
 		// Comparing Strings

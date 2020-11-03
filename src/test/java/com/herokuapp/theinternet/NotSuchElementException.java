@@ -17,7 +17,7 @@ public class NotSuchElementException extends TestUtilities {
 		// Open URL
 		String url = "https://the-internet.herokuapp.com/dynamic_loading/2";
 		driver.get(url);
-		System.out.println("URL open");
+		log.info("URL open");
 
 		// Identify start button
 		WebElement startButton = driver.findElement(By.xpath("//div[@id='start']/button"));
