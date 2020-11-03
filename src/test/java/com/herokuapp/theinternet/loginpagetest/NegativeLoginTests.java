@@ -1,14 +1,14 @@
 package com.herokuapp.theinternet.loginpagetest;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class NegativeLoginTests {
+import com.herokuapp.theinternet.base.BaseTest;
+
+public class NegativeLoginTests extends BaseTest{
 	
 	
 	@Parameters({ "username", "password", "expectedMessage" })
@@ -17,19 +17,10 @@ public class NegativeLoginTests {
 	public void negativeLoginTest(String username, String password, String expectedMessage) {
 		System.out.println("Starting Negative Username Test\n\n");
 
-		// Create Chrome Driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		System.out.println("Google Chrome Webdriver Created.");
-
 		// Open URL
 		String url = "https://the-internet.herokuapp.com/login";
 		driver.get(url);
 		System.out.println("URL open");
-
-		// Maximize window
-		driver.manage().window().maximize();
-		System.out.println("Window maximized");
 
 		sleep(1000);
 
@@ -74,10 +65,6 @@ public class NegativeLoginTests {
 		Assert.assertTrue(actualMessage.contains(expectedMessage));
 
 		sleep(2000);
-
-		// End session
-		driver.quit();
-		System.out.println("Session ended.");
 	}
 
 	private void sleep(long n) {

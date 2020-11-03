@@ -2,41 +2,21 @@ package com.herokuapp.theinternet.loginpagetest;
 
 //import org.junit.Test;
 import org.testng.annotations.Test;
+
+import com.herokuapp.theinternet.base.BaseTest;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-public class PossitiveLoginTest {
+public class PossitiveLoginTest extends BaseTest {
 
 	@Test(priority = 1, enabled = true, groups = {"positiveTest"})
 	public void positiveLogingTest() {
-
-		// Create Driver
-		
-//		First, lets create the path
-//		System.setProperty(key, value)
-		
-//		Key: "Webdriver.chrome.driver"	
-//		value: path of the web Driver. to get it right click on the driver
-//		       and choose properties
-		
-		System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
-		
-		//Instance Web Driver
-		WebDriver driver = new ChromeDriver();
-		
-		// Open test page
-//		driver.get(url);
 		
 		String url = "https://the-internet.herokuapp.com/login";
 		driver.get(url);
 		System.out.println("Page was open");
-		
-		//Maximize browser window
-		driver.manage().window().maximize();
-		System.out.println("Page maximized");
 
 		// enter user name
 		WebElement username = driver.findElement(By.id("username"));
@@ -72,10 +52,6 @@ public class PossitiveLoginTest {
 		String actualMessage = loginMessage.getText();
 //		Assert.assertEquals(actualMessage,expectedMessage);
 		Assert.assertTrue(actualMessage.contains(expectedMessage));
-		
-		
-		//Close Browser
-		driver.quit();
 
 	}
 
