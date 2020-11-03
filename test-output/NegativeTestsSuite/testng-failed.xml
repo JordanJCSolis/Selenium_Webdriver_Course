@@ -8,13 +8,11 @@
       </run>
     </groups>
     <classes>
-      <class name="com.herokuapp.theinternet.NegativeTest">
+      <class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests">
         <methods>
-          <include name="endSession"/>
-          <include name="NegativeUsernameTest"/>
-          <include name="createDriver"/>
+          <include name="negativeLoginTest"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.NegativeTest -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetest.NegativeLoginTests -->
     </classes>
   </test> <!-- NegativeTest(failed) -->
 </suite> <!-- Failed suite [NegativeTestsSuite] -->

@@ -4,13 +4,13 @@
 
 	<test name="PossitiveTest">
 		<classes>
-			<class name="com.herokuapp.theinternet.PossitiveLoginTest" />
+			<class name="com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest" />
 		</classes>
 	</test>
 
 	<test name="NegativeTest">
 		<classes>
-			<class name="com.herokuapp.theinternet.NegativeTest" />
+			<class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests" />
 		</classes>
 	</test>
 	

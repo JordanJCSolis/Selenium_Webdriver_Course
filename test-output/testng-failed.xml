@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [NegativeTestsSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="NegativeTest(failed)">
+    <groups>
+      <run>
+        <include name="smokeTest"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.herokuapp.theinternet.DisabledElement">
+      <class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests">
         <methods>
-          <include name="disabledElementTest"/>
-          <include name="endSession"/>
-          <include name="setUp"/>
+          <include name="negativeLoginTest"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.DisabledElement -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetest.NegativeLoginTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- NegativeTest(failed) -->
+</suite> <!-- Failed suite [NegativeTestsSuite] -->

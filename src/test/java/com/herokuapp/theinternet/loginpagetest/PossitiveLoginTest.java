@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet;
+package com.herokuapp.theinternet.loginpagetest;
 
 //import org.junit.Test;
 import org.testng.annotations.Test;

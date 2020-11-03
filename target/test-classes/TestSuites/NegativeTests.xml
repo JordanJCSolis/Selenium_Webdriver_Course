@@ -13,7 +13,7 @@
 		</groups>
 
 		<classes>
-			<class name="com.herokuapp.theinternet.NegativeTest" />
+			<class name="com.herokuapp.theinternet.loginpagetest.NegativeTest" />
 		</classes>
 	</test>
 
