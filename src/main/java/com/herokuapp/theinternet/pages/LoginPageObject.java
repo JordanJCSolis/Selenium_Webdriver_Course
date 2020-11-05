@@ -9,6 +9,7 @@ public class LoginPageObject extends BasePageObject{
 	private By usernameLocator = By.id("username");
 	private By passwordLocator = By.name("password");
 	private By loginButtonLocator = By.tagName("button");
+	private By errorMessage = By.id("flash");
 
 	
 	// Execute Login
@@ -16,13 +17,18 @@ public class LoginPageObject extends BasePageObject{
 		log.info("Executing login with username [" + 
 				username + "] and password [" + 
 				password + "]");
-//		driver.findElement(usernameLocator).sendKeys(username);
 		type(username, usernameLocator);
-//		driver.findElement(passwordLocator).sendKeys(password);
 		type(password, passwordLocator);
-//		driver.findElement(loginButtonLocator).click();
 		click(loginButtonLocator);
 		return new SecureAreaPageObject(driver, log);
+	}
+	
+	public void waitForErrorMessage() {
+		waitForVisibility(errorMessage, 5);
+	}
+	
+	public String getErrorMessageText() {
+		return find(errorMessage).getText();
 	}
 	
 	// Constructor

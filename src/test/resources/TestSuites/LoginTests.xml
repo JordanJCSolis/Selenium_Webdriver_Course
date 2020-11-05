@@ -25,7 +25,7 @@
 		<classes>
 			<class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests">
 				<methods>
-					<include name="negativeLoginTest"></include>
+					<include name="negativeLoginTest"/>
 				</methods>
 			</class>
 		</classes>
@@ -42,7 +42,7 @@
 		<classes>
 			<class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests">
 				<methods>
-					<include name="negativeLoginTest"></include>
+					<include name="negativeLoginTest"/>
 				</methods>
 			</class>
 		</classes>

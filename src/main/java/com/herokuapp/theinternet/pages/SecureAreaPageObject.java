@@ -7,8 +7,8 @@ import org.openqa.selenium.WebDriver;
 public class SecureAreaPageObject extends BasePageObject{
 	
 	private String pageUrl = "http://the-internet.herokuapp.com/secure";
-	private By logOutButton = By.xpath("//a[@class='button secondary radious']");
-	private By message = By.id("flash-messages");
+	private By logOutButton = By.xpath("//a[@class='button secondary radius']");
+	private By message = By.id("flash");
 	
 	// Get URL from Page
 	public String getPageUrl() {

@@ -35,8 +35,7 @@ public class PossitiveLoginTest extends TestUtilities {
 		// successful login message
 		String expectedMessage = "You logged into a secure area!";
 		String actualMessage = secureArea.getSuccessMessageText();
-		
+
 		Assert.assertTrue(actualMessage.contains(expectedMessage));
 	}
-
 }

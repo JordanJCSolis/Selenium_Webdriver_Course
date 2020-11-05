@@ -7,6 +7,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
+import com.herokuapp.theinternet.pages.LoginPageObject;
+import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class NegativeLoginTests extends TestUtilities {
 
@@ -16,54 +18,24 @@ public class NegativeLoginTests extends TestUtilities {
 	public void negativeLoginTest(String username, String password, String expectedMessage) {
 		log.info("Starting Negative Login Test");
 
-		// Open URL
-		String url = "https://the-internet.herokuapp.com/login";
-		driver.get(url);
-		log.info("URL open");
+		// Open main page
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.openPage();
 
-		sleep(1000);
+		// Click Form Authentication
+		LoginPageObject loginPage = welcomePage.clickFormAuthenticationLink();
 
-		// Locate username textbox
-		WebElement usernameField = driver.findElement(By.xpath("//input[@name='username']"));
-		log.info("Username text box located successfully");
+		// Fill Username, password and click on Login
+		loginPage.login(username, password);
 
-		// Type incorrect username
-		usernameField.sendKeys(username);
-		log.info("Username typed");
-
-		sleep(2000);
-
-		// Locate password textbox
-		WebElement passwordField = driver.findElement(By.xpath("//input[@name='password']"));
-		log.info("Password text box located successfully");
-
-		// Type correct password
-		passwordField.sendKeys(password);
-		log.info("Password typed");
-
-		sleep(2000);
-
-		// locate Login button
-		WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
-		log.info("Login button located successfully");
-
-		// Clicking button
-		loginButton.click();
-		log.info("Click successfully");
-
-		sleep(2000);
+		// Wait for error message
+		loginPage.waitForErrorMessage();
+		
+		// Get error message
+		String currentMessage = loginPage.getErrorMessageText();
 
 		// Validation
+		Assert.assertTrue(currentMessage.contains(expectedMessage));
 
-		// Current Message
-		WebElement invalidUsernameMessage = driver.findElement(By.id("flash"));
-		log.info("Invalid message found");
-		String actualMessage = invalidUsernameMessage.getText();
-
-		// Comparing Strings
-		Assert.assertTrue(actualMessage.contains(expectedMessage));
-
-		sleep(2000);
 	}
-
 }
