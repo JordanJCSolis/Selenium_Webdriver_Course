@@ -8,10 +8,10 @@
 		</classes>
 	</test>
 
-	<test name="NegativeTest">
-		<classes>
-			<class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests" />
-		</classes>
-	</test>
+<!-- 	<test name="NegativeTest"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.herokuapp.theinternet.loginpagetest.NegativeLoginTests" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 	
 </suite>
