@@ -1,5 +1,7 @@
 package com.herokuapp.theinternet.pages;
 
+import java.util.List;
+
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -23,6 +25,11 @@ public class BasePageObject {
 	// Find element using given locator
 	protected WebElement find(By locator) {
 		return driver.findElement(locator);
+	}
+	
+	// Find all elements that use same locator
+	protected List<WebElement> findAll(By locator){
+		return driver.findElements(locator);
 	}
 	
 	// Click on element with given locator when it is visible

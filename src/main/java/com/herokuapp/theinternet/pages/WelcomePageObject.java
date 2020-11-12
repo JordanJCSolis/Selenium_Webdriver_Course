@@ -8,6 +8,7 @@ public class WelcomePageObject extends BasePageObject{
 	
 	private String pageUrl = "http://the-internet.herokuapp.com/";
 	private By formAutenticationLinkLocator = By.linkText("Form Authentication");
+	private By checkboxesLinkLocator = By.linkText("Checkboxes");
 	
 	
 	// Open Welcome Page
@@ -25,6 +26,14 @@ public class WelcomePageObject extends BasePageObject{
 		click(formAutenticationLinkLocator);
 		return new LoginPageObject(driver, log);
 	}
+	
+	// open Checkboxes page by clicking on Checkboxes link
+	public CheckboxesPageObject clickingCheckboxesLink() {
+		log.info("Clicking Checkboxed link on Welcome page");
+		click(checkboxesLinkLocator);
+		return new CheckboxesPageObject(driver,log);
+	}
+	
 
 	// Constructor
 	public WelcomePageObject(WebDriver driver, Logger log) {
