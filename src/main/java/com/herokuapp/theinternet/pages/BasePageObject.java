@@ -1,6 +1,8 @@
 package com.herokuapp.theinternet.pages;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
@@ -50,6 +52,16 @@ public class BasePageObject {
 		return driver.getCurrentUrl();
 	}
 	
+	// Get current page title
+	public String getCurrentPageTitle() {
+		return driver.getTitle();
+	}
+	
+	// Get current page source
+	public String getCurrentPageSource() {
+		return driver.getPageSource();
+	}
+	
 	// Wait for visibility
 	protected void waitForVisibility(By locator, Integer... timeOutInSecondsIntegers) {
 		int attempts = 0;
@@ -81,6 +93,23 @@ public class BasePageObject {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.alertIsPresent());
 		return driver.switchTo().alert();
+	}
+	
+	public void switchToWindowWithTitle(String expectedTitle) {
+		String firstwindow = driver.getWindowHandle();
+		
+		Set<String> allWindows = driver.getWindowHandles();
+		Iterator<String> windowsIteratior = allWindows.iterator();
+		
+		while(windowsIteratior.hasNext()){
+			String windowHandle = windowsIteratior.next().toString();
+			if(!windowHandle.equals(firstwindow)) {
+				driver.switchTo().window(windowHandle);
+				if(getCurrentPageTitle().equals(expectedTitle)) {
+					break;
+				}
+			}
+		}
 	}
 
 	// Constructor
