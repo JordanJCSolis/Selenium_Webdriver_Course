@@ -9,6 +9,8 @@ public class WelcomePageObject extends BasePageObject{
 	private String pageUrl = "http://the-internet.herokuapp.com/";
 	private By formAutenticationLinkLocator = By.linkText("Form Authentication");
 	private By checkboxesLinkLocator = By.linkText("Checkboxes");
+	private By dropdownLinkLocator = By.linkText("Dropdown");
+	private By javaScriptAlertsLocator = By.linkText("JavaScript Alerts");
 	
 	
 	// Open Welcome Page
@@ -27,11 +29,25 @@ public class WelcomePageObject extends BasePageObject{
 		return new LoginPageObject(driver, log);
 	}
 	
-	// open Checkboxes page by clicking on Checkboxes link
+	// Open Checkboxes page by clicking on Checkboxes link
 	public CheckboxesPageObject clickingCheckboxesLink() {
 		log.info("Clicking Checkboxed link on Welcome page");
 		click(checkboxesLinkLocator);
 		return new CheckboxesPageObject(driver,log);
+	}
+	
+	// Open Dropdown page by clicking on Dropdown link
+	public DropdownPageObject clickingDropdownLink() {
+		log.info("Clicking dropdown link on welcome page");
+		click(dropdownLinkLocator);
+		return new DropdownPageObject(driver,log);
+	}
+	
+	// Open JavaScript Alerts page by clicking on JavaScript Alerts Link
+	public JavaScriptAlertsPageObject clickingJavaScriptAlertsLink() {
+		log.info("Clicking JavaScript Alerts link on the Welcome Page");
+		click(javaScriptAlertsLocator);
+		return new JavaScriptAlertsPageObject(driver,log);
 	}
 	
 

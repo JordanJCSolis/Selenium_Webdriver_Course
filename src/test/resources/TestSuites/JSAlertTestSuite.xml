@@ -1,0 +1,51 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="JSAlertTestSuite" verbose="1" parallel="tests"
+	thread-count="3">
+
+	<test name="JSAlertTest">
+
+		<parameter name="browser" value="chrome"></parameter>
+
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.jsalertpagetest.JSAlertTest">
+				<methods>
+					<include name="jsAlertTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="JSConfirmTest">
+
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="decision" value="Cancel"></parameter>
+
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.jsalertpagetest.JSAlertTest">
+				<methods>
+					<include name="JSConfirm" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="JSPromptTest">
+
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="jsPromptString" value="Text"></parameter>
+
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.jsalertpagetest.JSAlertTest">
+				<methods>
+					<include name="jsPrompt" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

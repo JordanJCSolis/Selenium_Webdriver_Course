@@ -3,10 +3,12 @@
 <suite name="Checkboxes Test Suite" verbose="1">
 
 	<test name="CheckboxesTest">
+	
+	<parameter name="browser" value="firefox"></parameter>
 
 		<classes>
 			<class
-				name="com.herokuapp.theinternetcom.herokuapp.theinternet.checkboxespagetest.CheckboxesTest">
+				name="com.herokuapp.theinternet.checkboxespagetest.CheckboxesTest">
 				<methods>
 					<include name="selectingTwoCheckboxesTest" />
 				</methods>

@@ -1,4 +1,4 @@
-package com.herokuapp.theinternetcom.herokuapp.theinternet.checkboxespagetest;
+package com.herokuapp.theinternet.checkboxespagetest;
 
 import org.testng.annotations.Test;
 
