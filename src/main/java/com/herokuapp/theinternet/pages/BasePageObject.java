@@ -97,7 +97,7 @@ public class BasePageObject {
 	
 	public void switchToWindowWithTitle(String expectedTitle) {
 		String firstwindow = driver.getWindowHandle();
-		
+
 		Set<String> allWindows = driver.getWindowHandles();
 		Iterator<String> windowsIteratior = allWindows.iterator();
 		
