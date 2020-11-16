@@ -95,6 +95,7 @@ public class BasePageObject {
 		return driver.switchTo().alert();
 	}
 	
+	// Switch to window
 	public void switchToWindowWithTitle(String expectedTitle) {
 		String firstwindow = driver.getWindowHandle();
 
@@ -110,6 +111,12 @@ public class BasePageObject {
 				}
 			}
 		}
+	}
+	
+	
+	// Switch to frame
+	protected void switchToFrame(By frameLocator) {
+		driver.switchTo().frame(find(frameLocator));
 	}
 
 	// Constructor
