@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="KeyPresses Test Suite" verbose="1" parallel="tests" thread-count="2">
+
+	<test name="Key Presses with locator">
+
+		<parameter name="browser" value="firefox"></parameter>
+
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.keypressestest.KeyPressesTest">
+				<methods>
+					<include name="keyPressesTestWithLocator"></include>
+					<exclude name="keyPressesTestWithoutLocator"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="Key Presses using Actions class">
+
+		<parameter name="browser" value="firefox"></parameter>
+
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.keypressestest.KeyPressesTest">
+				<methods>
+					<include name="keyPressesTestWithoutLocator"></include>
+					<exclude name="keyPressesTestWithLocator"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
