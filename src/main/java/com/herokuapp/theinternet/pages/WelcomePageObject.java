@@ -15,6 +15,7 @@ public class WelcomePageObject extends BasePageObject{
 	private By wysiwygEditorLocator = By.linkText("WYSIWYG Editor");
 	private By keyPressesLocator = By.linkText("Key Presses");
 	private By fileUploadLocator = By.linkText("File Upload");
+	private By dragAndDropLinkLocator = By.linkText("Drag and Drop");
 	
 	
 	// Open Welcome Page
@@ -80,6 +81,13 @@ public class WelcomePageObject extends BasePageObject{
 		log.info("Clicking File Upload link on Welcome Page");
 		click(fileUploadLocator);
 		return new FileUploadPageObject(driver, log);
+	}
+	
+	// Open Drag and Drop page by clicking Drag and Drop link
+	public DragAndDropPageObject clickingDragAndDropLink() {
+		log.info("Clicking on Drag and Drop link");
+		click(dragAndDropLinkLocator);
+		return new DragAndDropPageObject(driver, log);
 	}
 	
 
