@@ -16,6 +16,7 @@ public class WelcomePageObject extends BasePageObject{
 	private By keyPressesLocator = By.linkText("Key Presses");
 	private By fileUploadLocator = By.linkText("File Upload");
 	private By dragAndDropLinkLocator = By.linkText("Drag and Drop");
+	private By hoversLinkLocator = By.linkText("Hovers");
 	
 	
 	// Open Welcome Page
@@ -88,6 +89,13 @@ public class WelcomePageObject extends BasePageObject{
 		log.info("Clicking on Drag and Drop link");
 		click(dragAndDropLinkLocator);
 		return new DragAndDropPageObject(driver, log);
+	}
+	
+	// Open Hovers page by clicking on Hovers link
+	public HoversPageObject clickingHoversLink() {
+		log.info("Clicking on Hovers link");
+		click(hoversLinkLocator);
+		return new	HoversPageObject(driver, log);
 	}
 	
 

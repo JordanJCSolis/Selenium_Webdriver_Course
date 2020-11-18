@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="HoversTestSuite" verbose="1" parallel="tests"
+	thread-count="1">
+
+<parameter name="userProfile" value="3"></parameter>
+
+	<test name="HoversTest">
+		<classes>
+			<class name="com.herokuapp.theinternet.hoverstest.HoversTest" />
+		</classes>
+	</test>
+
+</suite>
