@@ -9,9 +9,9 @@ import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class FileUploadTest extends TestUtilities {
 	
-	@Test
-	public void imageUploadFileTest() {
-		log.info("Starting imageUploadTest");
+	@Test(dataProvider = "files")
+	public void fileUploadTest(int testNumber, String fileName) {
+		log.info("Starting file upload #" + testNumber + " for " + fileName);
 		
 		// Open main page
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
@@ -21,7 +21,6 @@ public class FileUploadTest extends TestUtilities {
 		FileUploadPageObject fileUpload = welcomePage.clickngFileUploadLink();
 		
 		// Select file
-		String fileName = "IEEE Univrse.jpg";
 		fileUpload.selectFile(fileName);
 		
 		// Puh upload button
