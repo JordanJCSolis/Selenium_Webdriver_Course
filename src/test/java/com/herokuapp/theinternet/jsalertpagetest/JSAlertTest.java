@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.JavaScriptAlertsPageObject;
@@ -13,6 +14,9 @@ public class JSAlertTest extends TestUtilities {
 
 	@Test
 	public void jsAlertTest() {
+		
+		// SoftAssert instance
+		SoftAssert softAssert = new SoftAssert();
 
 		// Open main page
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
@@ -25,22 +29,24 @@ public class JSAlertTest extends TestUtilities {
 		jsAlert.clickJSAlertButton();
 
 		// Get text alert
-		String jsAlertText = jsAlert.getAlertText();
+		String jsAlertText = jsAlert.getAlertText() + "[FAIL]";
 
 		// Click on "Aceptar" option
 		jsAlert.acceptAlert();
 
 		// Get result text
-		String jsAlertResultText = jsAlert.getResultText();
+		String jsAlertResultText = jsAlert.getResultText() + "[FAIL]";
 
 		// Verifications
 
 		// First verification - Alert text is the expected
-		Assert.assertEquals(jsAlertText, "I am a JS Alert", "Error 1");
+		softAssert.assertEquals(jsAlertText, "I am a JS Alert", "Error 1");
 
 		// Second verification - Result text is the expected
 //		Assert.assertEquals(jsAlertResultText, "You successfuly clicked an alert");
-		Assert.assertTrue(jsAlertResultText.equals("You successfuly clicked an alert"), "Error 2");
+		softAssert.assertTrue(jsAlertResultText.equals("You successfuly clicked an alert"), "Error 2");
+		
+		softAssert.assertAll();
 	}
 
 	@Parameters("decision")
