@@ -1,5 +1,7 @@
 package com.herokuapp.theinternet.base;
 
+import java.lang.reflect.Method;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -15,11 +17,16 @@ public class BaseTest {
 	protected WebDriver driver;
 	//Variable of type Logger
 	protected Logger log;
+	
+	//
+	protected String testSuiteName;
+	protected String testName;
+	protected String testMethodName;
 
 	// Create Driver Method
 	@Parameters("browser")
 	@BeforeMethod(alwaysRun = true)
-	public void setup(@Optional("chrome") String browser, ITestContext ctx) {
+	public void setup(Method method, @Optional("chrome") String browser, ITestContext ctx) {
 		
 		// Getting current XML test name
 		String testName = ctx.getCurrentXmlTest().getName();
@@ -32,6 +39,10 @@ public class BaseTest {
 		// Maximize window
 		driver.manage().window().maximize();
 		log.info("Window maximized");
+		
+		this.testSuiteName = ctx.getSuite().getName();
+		this.testName = testName;
+		this.testMethodName = method.getName();
 	}
 
 	// Ending session
