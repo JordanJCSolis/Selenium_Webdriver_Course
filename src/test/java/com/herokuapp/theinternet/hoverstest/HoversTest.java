@@ -19,15 +19,15 @@ public class HoversTest extends TestUtilities {
 		// Open Welcome Page
 		WelcomePageObject welcomePageVariable = new WelcomePageObject(driver, log);
 		welcomePageVariable.openPage();
-		takeScreenshot("WelcomePage opened");
+//		takeScreenshot("WelcomePage opened");
 		
 		// Open page under test
 		HoversPageObject hoverPageVariable = welcomePageVariable.clickingHoversLink();
-		takeScreenshot("HoversPage opened");
+//		takeScreenshot("HoversPage opened");
 		
 		// Open user Profile
 		hoverPageVariable.openProfile(profile);
-		takeScreenshot("profile" + profile + "Page opened");
+//		takeScreenshot("profile" + profile + "Page opened");
 		
 		// Verification
 		Assert.assertTrue(hoverPageVariable.getCurrentUrl().contains("/users/" + profile),"Error");

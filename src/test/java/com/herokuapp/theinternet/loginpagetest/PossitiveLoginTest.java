@@ -17,15 +17,15 @@ public class PossitiveLoginTest extends TestUtilities {
 		// Open Main page
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
 		welcomePage.openPage();
-		takeScreenshot("WelcomePage opened");
+//		takeScreenshot("WelcomePage opened");
 
 		// Click Form Authentication Link
 		LoginPageObject loginPage = welcomePage.clickFormAuthenticationLink();
-		takeScreenshot("loginPage opened");
+//		takeScreenshot("loginPage opened");
 
 		// Enter user name, password and click login button
 		SecureAreaPageObject secureArea = loginPage.login("tomsmith", "SuperSecretPassword!");
-		takeScreenshot("secureAreaPage opened");
+//		takeScreenshot("secureAreaPage opened");
 
 		// verification
 
