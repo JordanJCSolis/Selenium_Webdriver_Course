@@ -1,5 +1,6 @@
 package com.herokuapp.theinternet.loginpagetest;
 
+import org.openqa.selenium.Cookie;
 import org.testng.Assert;
 //import org.junit.Test;
 import org.testng.annotations.Test;
@@ -22,10 +23,23 @@ public class PossitiveLoginTest extends TestUtilities {
 		// Click Form Authentication Link
 		LoginPageObject loginPage = welcomePage.clickFormAuthenticationLink();
 //		takeScreenshot("loginPage opened");
+		
+		// Create new cookie
+		Cookie ck = new Cookie("Username", "tomsmith", "the-internet.herokuapp.com", "/", null);
+		
+		// Add Cookie
+		loginPage.setCookie(ck);
 
 		// Enter user name, password and click login button
 		SecureAreaPageObject secureArea = loginPage.login("tomsmith", "SuperSecretPassword!");
 //		takeScreenshot("secureAreaPage opened");
+		
+		// Get cookies
+		String usernameCookie = secureArea.getCookie("Username");
+		log.info("Username cookie: " + usernameCookie);
+		
+		String sessionCookie = secureArea.getCookie("rack.session");
+		log.info("rack.session cookie: " + sessionCookie);
 
 		// verification
 

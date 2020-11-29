@@ -7,6 +7,7 @@ import java.util.Set;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -160,6 +161,19 @@ public class BasePageObject {
 	protected void hoverOverElement(WebElement element) {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
+	}
+	
+	// Add cookie
+	public void setCookie(Cookie ck) {
+		log.info("Addind cookie " + ck.getName());
+		driver.manage().addCookie(ck);
+		log.info("Cookie added");
+	}
+	
+	// Get cookie value
+	public String getCookie(String name) {
+		log.info("Getting value of cookie " + name);
+		return driver.manage().getCookieNamed(name).getValue();
 	}
 
 	// Constructor
