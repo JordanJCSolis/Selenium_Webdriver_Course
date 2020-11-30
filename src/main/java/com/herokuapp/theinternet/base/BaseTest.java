@@ -27,9 +27,9 @@ public class BaseTest {
 	protected String testMethodName;
 
 	// Create Driver Method
-	@Parameters("browser")
+	@Parameters({"browser", "chromeProfile"})
 	@BeforeMethod(alwaysRun = true)
-	public void setup(Method method, @Optional("chrome") String browser, ITestContext ctx) {
+	public void setup(Method method, @Optional("chrome") String browser, @Optional String profile, ITestContext ctx) {
 
 		// Getting current XML test name
 		String testName = ctx.getCurrentXmlTest().getName();
@@ -37,7 +37,11 @@ public class BaseTest {
 		log = LogManager.getLogger(testName);
 
 		BrowserDriverFactory facftory = new BrowserDriverFactory(browser, log);
-		driver = facftory.createDriver();
+		if (profile != null) {
+			driver = facftory.createChromeWithProfile(profile);
+		} else {
+			driver = facftory.createDriver();
+		}
 
 		// Maximize window
 		driver.manage().window().maximize();

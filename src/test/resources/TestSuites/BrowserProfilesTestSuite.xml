@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="WebBrowserProfilesTestSuite" verbose="1"
+	parallel="tests" thread-count="1">
+
+	<test name="PossitiveLoginTest - without profile">
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest" />
+		</classes>
+	</test>
+
+	<test name="PossitiveLoginTest - with profile">
+		<parameter name="chromeProfile" value="ChromeProfile"></parameter>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetest.PossitiveLoginTest" />
+		</classes>
+	</test>
+
+</suite>
