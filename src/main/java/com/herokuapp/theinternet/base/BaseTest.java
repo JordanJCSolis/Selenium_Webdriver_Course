@@ -27,9 +27,10 @@ public class BaseTest {
 	protected String testMethodName;
 
 	// Create Driver Method
-	@Parameters({"browser", "chromeProfile"})
+	@Parameters({"browser", "chromeProfile", "deviceName"})
 	@BeforeMethod(alwaysRun = true)
-	public void setup(Method method, @Optional("chrome") String browser, @Optional String profile, ITestContext ctx) {
+	public void setup(Method method, @Optional("chrome") String browser, 
+			@Optional String profile, @Optional String deviceName, ITestContext ctx) {
 
 		// Getting current XML test name
 		String testName = ctx.getCurrentXmlTest().getName();
@@ -39,6 +40,8 @@ public class BaseTest {
 		BrowserDriverFactory facftory = new BrowserDriverFactory(browser, log);
 		if (profile != null) {
 			driver = facftory.createChromeWithProfile(profile);
+		} else if (deviceName != null){
+			driver = facftory.createChrimeWithMobileEmulation(deviceName);
 		} else {
 			driver = facftory.createDriver();
 		}
